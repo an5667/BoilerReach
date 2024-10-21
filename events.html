@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - BoilerReach</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling the Filter Buttons */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .filter-btn {
+            background-color: #D39E00;
+            color: #000;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .filter-btn:hover {
+            background-color: #000;
+            color: #D39E00;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .event-block {
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            display: none; /* Initially hidden */
+        }
+
+        .event-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .event-block:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu-bar">
+        <ul>
+            <li><a href="html.html" class="menu-item">Home</a></li>
+            <li><a href="resources.html" class="menu-item">Resources</a></li>
+            <li><a href="map.html" class="menu-item">Mappy</a></li>
+            <li><a href="news.html" class="menu-item">News</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="section-title">Campus News & Events</h1>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+        <button class="filter-btn" onclick="filterEvents('all')">All</button>
+        <button class="filter-btn" onclick="filterEvents('culture')">Culture</button>
+        <button class="filter-btn" onclick="filterEvents('music')">Music</button>
+        <button class="filter-btn" onclick="filterEvents('sports')">Sports</button>
+        <button class="filter-btn" onclick="filterEvents('educational')">Educational</button>
+    </div>
+
+    <!-- Event Grid -->
+    <div class="event-grid" id="eventGrid">
+        <!-- Culture Event -->
+        <div class="event-block" data-category="culture">
+            <a href="https://www.instagram.com/p/C6KjVtetxVC/?igsh=ZzNod20wNDZqZThy" target="_blank">
+                <img src="https://www.instagram.com/p/C6KjVtetxVC/media/?size=l" alt="Culture Event">
+            </a>
+        </div>
+
+        <!-- Music Event -->
+        <div class="event-block" data-category="music">
+            <a href="https://www.instagram.com/p/C-qK_f7PcBt/?igsh=MWpqazJ1b3cycWZkOQ" target="_blank">
+                <img src="https://www.instagram.com/p/C-qK_f7PcBt/media/?size=l" alt="Music Event">
+            </a>
+        </div>
+
+        <!-- Sports Events -->
+        <div class="event-block" data-category="sports">
+            <a href="https://www.instagram.com/p/C4YTY-AJvnu/?igsh=eWxlbWMzNmNoYnFs" target="_blank">
+                <img src="https://www.instagram.com/p/C4YTY-AJvnu/media/?size=l" alt="Sports Event 1">
+            </a>
+        </div>
+
+        <div class="event-block" data-category="sports">
+            <a href="https://www.instagram.com/p/DA0uaiIi-iI/?igsh=OTUxZWx5NjVrdjI&img_index=1" target="_blank">
+                <img src="https://www.instagram.com/p/DA0uaiIi-iI/media/?size=l" alt="Sports Event 2">
+            </a>
+        </div>
+
+        <!-- Educational Events -->
+        <div class="event-block" data-category="educational">
+            <a href="https://www.instagram.com/p/C0hFr_Qutbi/?igsh=MXo5dHBuOHA2NzRn" target="_blank">
+                <img src="https://www.instagram.com/p/C0hFr_Qutbi/media/?size=l" alt="Educational Event 1">
+            </a>
+        </div>
+
+        <div class="event-block" data-category="educational">
+            <a href="https://www.instagram.com/p/DBOy8FTNChs/?igsh=MTRnYjV3amcyOHBnbA" target="_blank">
+                <img src="https://www.instagram.com/p/DBOy8FTNChs/media/?size=l" alt="Educational Event 2">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Check if images load successfully and show event blocks
+        document.querySelectorAll('.event-block img').forEach(img => {
+            img.onload = () => {
+                img.closest('.event-block').style.display = 'block';
+            };
+            img.onerror = () => {
+                img.closest('.event-block').remove(); // Remove if image doesn't load
+            };
+        });
+
+        // Filter function to show events by category
+        function filterEvents(category) {
+            const events = document.querySelectorAll('.event-block');
+            events.forEach(event => {
+                event.style.display = (category === 'all' || event.getAttribute('data-category') === category) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
