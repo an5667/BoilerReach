@@ -21,24 +21,21 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         
-        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+        // Adjust the logic to highlight current section in view
+        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
             current = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.classList.contains(current)) {
+        if (link.getAttribute('href').substring(1) === current) {
             link.classList.add('active');
         }
     });
 });
 
 // Modal Pop-Up Example
-const newsLink = document.querySelector('.news-link');
-const resourcesLink = document.querySelector('.resources-link');
-const mappyLink = document.querySelector('.mappy-link');
-
 const modal = document.createElement('div');
 modal.className = 'modal';
 modal.innerHTML = `
@@ -50,19 +47,11 @@ modal.innerHTML = `
 `;
 document.body.appendChild(modal);
 
-// Open Modal
-newsLink.addEventListener('click', () => {
-    modal.querySelector('.modal-content p').innerText = "Explore Purdue’s Latest News - Stay in the loop with real-time updates!";
+// Function to open modal with dynamic content
+function openModal(content) {
+    modal.querySelector('.modal-content p').innerText = content;
     modal.style.display = "block";
-});
-resourcesLink.addEventListener('click', () => {
-    modal.querySelector('.modal-content p').innerText = "Purdue’s Student Resources - From academic support to mental health services, you’re just a click away!";
-    modal.style.display = "block";
-});
-mappyLink.addEventListener('click', () => {
-    modal.querySelector('.modal-content p').innerText = "Say hi to Mappy! Navigate Purdue's vibrant campus with our event map.";
-    modal.style.display = "block";
-});
+}
 
 // Close Modal
 modal.querySelector('.close-button').addEventListener('click', () => {
@@ -74,6 +63,19 @@ window.addEventListener('click', (e) => {
     }
 });
 
+// Event Listeners for Links to Open Modal with Dynamic Content
+document.querySelectorAll('.news-link, .resources-link, .mappy-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const contentMap = {
+            'news-link': "Explore Purdue’s Latest News - Stay in the loop with real-time updates!",
+            'resources-link': "Purdue’s Student Resources - From academic support to mental health services, you’re just a click away!",
+            'mappy-link': "Say hi to Mappy! Navigate Purdue's vibrant campus with our event map."
+        };
+        openModal(contentMap[link.classList[0]]);
+    });
+});
+
 // Dynamic Content Loading (Example)
 const dynamicContent = {
     news: "Latest News: Purdue has announced new policies for student support.",
@@ -83,12 +85,13 @@ const dynamicContent = {
 
 function loadContent(section) {
     const contentArea = document.querySelector('.dynamic-content');
-    contentArea.innerText = dynamicContent[section];
+    contentArea.innerText = dynamicContent[section] || "Content not available.";
 }
 
+// Event Listeners for Navigation Links to Load Dynamic Content
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        const section = link.getAttribute('href').substring(1); // Get section name
+        const section = link.getAttribute('href').substring(1); // Get section name without '#'
         loadContent(section);
     });
 });
