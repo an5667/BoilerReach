@@ -128,3 +128,60 @@ body {
         font-size: 24px; /* Further reduce font size for mobile */
     }
 }
+
+/* Resource Page Styles */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0;
+    color: #D39E00; /* Gold text */
+}
+
+.resource-category {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-category h2 {
+    color: #D39E00;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.resource-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-category ul li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resource-category ul li a {
+    color: #D39E00;
+    text-decoration: none;
+}
+
+.resource-category ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .resources-page .content-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .resources-page .content-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
