@@ -16,13 +16,14 @@ body {
 /* Interactive Menu Bar */
 .menu-bar {
     background-color: #000; /* Black background */
+    color:white;
     padding: 10px 0;
     text-align: center;
     position: relative; /* Positioning for dropdowns */
 }
 
 .menu-bar ul {
-    list-style: none;
+    color:white;
 }
 
 .menu-bar li {
@@ -35,7 +36,14 @@ body {
 .menu-bar li:hover {
     transform: scale(1.1); /* Scale up on hover */
 }
-
+.menu-item a {
+    color: white; /* Set the desired color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
 .menu-item {
     color: #D39E00; /* Gold text */
     text-decoration: none;
@@ -187,12 +195,13 @@ body {
 }
 
 .resource-category ul li a {
-    color: #D39E00;
+    color: black;
     text-decoration: none;
 }
 
 .resource-category ul li a:hover {
     text-decoration: underline;
+    color: #D39E00;
 }
 
 /* Responsive Design */
