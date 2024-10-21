@@ -18,6 +18,7 @@ body {
     background-color: #000; /* Black background */
     padding: 10px 0;
     text-align: center;
+    position: relative; /* Positioning for dropdowns */
 }
 
 .menu-bar ul {
@@ -25,7 +26,8 @@ body {
 }
 
 .menu-bar li {
-    display: inline;
+    display: inline-block; /* Inline-block to allow dropdowns */
+    position: relative; /* Position relative for dropdown positioning */
     margin: 0 15px;
 }
 
@@ -33,6 +35,36 @@ body {
     color: #D39E00; /* Gold text */
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position dropdown below parent */
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
+    z-index: 1; /* Ensure dropdown appears above other elements */
+}
+
+.menu-bar li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    display: block; /* Stack dropdown items */
+    margin: 0; /* No margin for dropdown items */
+}
+
+.dropdown a {
+    color: #000; /* Black text for dropdown links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for dropdown items */
+    display: block; /* Block display for entire area */
+}
+
+.dropdown a:hover {
+    background-color: #D39E00; /* Change background on hover */
+    color: #fff; /* Change text to white on hover */
 }
 
 /* BoilerReach Title */
