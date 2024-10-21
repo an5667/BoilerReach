@@ -1,0 +1,98 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Interactive Menu Bar */
+.menu-bar {
+    background-color: #000; /* Black background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-bar ul {
+    list-style: none;
+}
+
+.menu-bar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu-item {
+    color: #D39E00; /* Gold text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BoilerReach Title */
+.site-title {
+    font-weight: bold;
+    color: #000; /* Black for 'Boiler' */
+    font-size: 48px; /* Default size */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.reach-title {
+    font-style: italic;
+    color: #D39E00; /* Gold for 'Reach' */
+}
+
+/* Content Section Styles */
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    color: #D39E00; /* Gold headings */
+}
+
+.content-section ul {
+    margin: 10px 0;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #D39E00; /* Gold background */
+    color: #000; /* Black text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.cta-button:hover {
+    background-color: #000; /* Change to black on hover */
+    color: #D39E00; /* Change text to gold on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 36px; /* Reduce font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 24px; /* Further reduce font size for mobile */
+    }
+}
