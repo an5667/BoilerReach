@@ -29,12 +29,25 @@ body {
     display: inline-block; /* Inline-block to allow dropdowns */
     position: relative; /* Position relative for dropdown positioning */
     margin: 0 15px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.menu-bar li:hover {
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 .menu-item {
     color: #D39E00; /* Gold text */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    color: #fff; /* Change text to white on hover */
+    background-color: #D39E00; /* Change background to gold */
 }
 
 /* Dropdown Menu Styles */
@@ -44,10 +57,19 @@ body {
     background-color: #fff; /* White background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
     z-index: 1; /* Ensure dropdown appears above other elements */
+    top: 100%; /* Position directly below the menu item */
+    left: 0;
+    min-width: 200px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .menu-bar li:hover .dropdown {
     display: block; /* Show dropdown on hover */
+    opacity: 1;
+    visibility: visible;
 }
 
 .dropdown li {
@@ -60,6 +82,8 @@ body {
     text-decoration: none; /* Remove underline */
     padding: 10px 15px; /* Padding for dropdown items */
     display: block; /* Block display for entire area */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
 }
 
 .dropdown a:hover {
@@ -108,7 +132,7 @@ body {
     color: #000; /* Black text */
     text-decoration: none; /* Remove underline */
     border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .cta-button:hover {
