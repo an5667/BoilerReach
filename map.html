@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mappy!</title>
     <style>
+        /* Container to hold the map */
+        body{
+            font-family:Arial,sans-serif;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .map-container {
             position: relative;
-            width: 800px;
-            height: 600px;
+            width: 1200px; /* Adjust width to your map image size */
+            height: 900px; /* Adjust height to your map image size */
+        
+
         }
 
+        /* The map image itself */
         .map-image {
             width: 100%;
             height: 100%;
         }
 
+        /* Styling for the pin */
         .pin {
             position: absolute;
             width: 20px;
@@ -23,9 +36,10 @@
             background-color: rgb(0, 0, 0);
             border-radius: 50%;
             cursor: pointer;
-            transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%); /* Adjust to center the pin */
         }
 
+        /* Tooltip for location information */
         .pin::after {
             content: attr(data-location);
             position: absolute;
@@ -48,18 +62,44 @@
         .pin:hover {
             background-color: rgb(142, 111, 62)
         }
+        .menu-bar {
+        background-color: #000; /* Black background */
+        padding: 10px 0;
+        text-align: center;
+        position: relative; /* Positioning for dropdowns */
+        }
+
+        .menu-bar ul {
+        list-style: none;
+        }
+
+        .menu-bar li {
+        display: inline-block; /* Inline-block to allow dropdowns */
+        position: relative; /* Position relative for dropdown positioning */
+        margin: 0 15px;
+        }
+
+.menu-item {
+    color: #D39E00; /* Gold text */
+    text-decoration: none;
+    font-weight: bold;
+}
+        
     </style>
 </head>
 <body>
-<nav class="menu-bar">
+    <nav class="menu-bar">
         <ul>
             <li><a href="html.html#news" class="menu-item">Explore News</a></li>
             <li><a href="html.html#resources" class="menu-item">Student Services</a></li>
             <li><a href="resources.html" class="menu-item">Resources</a></li>
             <li><a href="map.html" class="menu-item">Discover Mappy</a></li>
         </ul>
+        
     </nav>
+    <h1>
     <div class="map-container">
+        
         <img src="Map.png" alt="Map" class="map-image">
         <a href="https://maps.app.goo.gl/zJDAX9MR3SqvWUaR9" target="_blank">
             <div class="pin" data-location="CoRec Gym" style="top: 25%; left: 37%;"></div>
@@ -89,6 +129,7 @@
         <div class="pin" data-location="Purdue Student Union Board" style="top: 60%; left: 85%;"></div>
         </a>
     </div>
+</h1>
 
 </body>
 </html>
