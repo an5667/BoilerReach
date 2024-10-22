@@ -7,7 +7,7 @@
     <title>News - BoilerReach</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Styling the Filter Buttons */
+      
         .filter-container {
             display: flex;
             justify-content: center;
@@ -60,7 +60,7 @@
 
 <body>
 
-        <!-- Interactive Menu Bar -->
+        
     <nav class="menu-bar">
         <ul>
             <li class ="menu-item">
@@ -101,7 +101,7 @@
 
     <h1 class="section-title">Campus News & Events</h1>
 
-    <!-- Filter Buttons -->
+    
     <div class="filter-container">
         <button class="filter-btn" onclick="filterEvents('all')">All</button>
         <button class="filter-btn" onclick="filterEvents('culture')">Culture</button>
@@ -110,7 +110,7 @@
         <button class="filter-btn" onclick="filterEvents('educational')">Educational</button>
     </div>
 
-    <!-- Event Grid -->
+    
     <div class="event-grid" id="eventGrid">
         <!-- Culture Event -->
         <div class="event-block" data-category="culture">
@@ -126,7 +126,7 @@
             </a>
         </div>
 
-        <!-- Sports Events -->
+        
         <div class="event-block" data-category="sports">
             <a href="https://www.instagram.com/p/C4YTY-AJvnu/?igsh=eWxlbWMzNmNoYnFs" target="_blank">
                 <img src="https://www.instagram.com/p/C4YTY-AJvnu/media/?size=l" alt="Sports Event 1">
@@ -139,7 +139,7 @@
             </a>
         </div>
 
-        <!-- Educational Events -->
+        
         <div class="event-block" data-category="educational">
             <a href="https://www.instagram.com/p/C0hFr_Qutbi/?igsh=MXo5dHBuOHA2NzRn" target="_blank">
                 <img src="https://www.instagram.com/p/C0hFr_Qutbi/media/?size=l" alt="Educational Event 1">
@@ -164,7 +164,7 @@
             };
         });
 
-        // Filter function to show events by category
+        
         function filterEvents(category) {
             const events = document.querySelectorAll('.event-block');
             events.forEach(event => {
