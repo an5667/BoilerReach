@@ -1,4 +1,4 @@
-// Smooth Scrolling Effect
+
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -10,7 +10,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Dynamic Menu Highlighting
+
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
 
@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         
-        // Adjust the logic to highlight current section in view
+        
         if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
             current = section.getAttribute('id');
         }
@@ -35,7 +35,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Modal Pop-Up Example
+
 const modal = document.createElement('div');
 modal.className = 'modal';
 modal.innerHTML = `
@@ -47,13 +47,13 @@ modal.innerHTML = `
 `;
 document.body.appendChild(modal);
 
-// Function to open modal with dynamic content
+
 function openModal(content) {
     modal.querySelector('.modal-content p').innerText = content;
     modal.style.display = "block";
 }
 
-// Close Modal
+
 modal.querySelector('.close-button').addEventListener('click', () => {
     modal.style.display = "none";
 });
@@ -63,7 +63,7 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Event Listeners for Links to Open Modal with Dynamic Content
+
 document.querySelectorAll('.news-link, .resources-link, .mappy-link').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -76,7 +76,7 @@ document.querySelectorAll('.news-link, .resources-link, .mappy-link').forEach(li
     });
 });
 
-// Dynamic Content Loading (Example)
+
 const dynamicContent = {
     news: "Latest News: Purdue has announced new policies for student support.",
     resources: "Resources Update: New counseling services are now available for students.",
@@ -88,7 +88,7 @@ function loadContent(section) {
     contentArea.innerText = dynamicContent[section] || "Content not available.";
 }
 
-// Event Listeners for Navigation Links to Load Dynamic Content
+
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         const section = link.getAttribute('href').substring(1); // Get section name without '#'
