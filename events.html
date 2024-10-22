@@ -43,7 +43,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s;
-            display: none; /* Initially hidden */
+            display: none; 
         }
 
         .event-block img {
@@ -112,14 +112,12 @@
 
     
     <div class="event-grid" id="eventGrid">
-        <!-- Culture Event -->
         <div class="event-block" data-category="culture">
             <a href="https://www.instagram.com/p/C6KjVtetxVC/?igsh=ZzNod20wNDZqZThy" target="_blank">
                 <img src="https://www.instagram.com/p/C6KjVtetxVC/media/?size=l" alt="Culture Event">
             </a>
         </div>
 
-        <!-- Music Event -->
         <div class="event-block" data-category="music">
             <a href="https://www.instagram.com/p/C-qK_f7PcBt/?igsh=MWpqazJ1b3cycWZkOQ" target="_blank">
                 <img src="https://www.instagram.com/p/C-qK_f7PcBt/media/?size=l" alt="Music Event">
@@ -154,13 +152,12 @@
     </div>
 
     <script>
-        // Check if images load successfully and show event blocks
         document.querySelectorAll('.event-block img').forEach(img => {
             img.onload = () => {
                 img.closest('.event-block').style.display = 'block';
             };
             img.onerror = () => {
-                img.closest('.event-block').remove(); // Remove if image doesn't load
+                img.closest('.event-block').remove(); 
             };
         });
 
