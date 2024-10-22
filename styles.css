@@ -146,7 +146,6 @@ body {
     color: #D39E00; 
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .site-title {
         font-size: 36px; 
