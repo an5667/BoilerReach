@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Body and Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -13,7 +12,6 @@ body {
     color: #333;
 }
 
-/* Interactive Menu Bar */
 .menu-bar {
     background-color: #000; /* Black background */
     color:white;
@@ -55,18 +53,17 @@ body {
 }
 
 .menu-item:hover {
-    color: #fff; /* Change text to white on hover */
-    background-color: #D39E00; /* Change background to gold */
-}
+    color: #fff; 
+    background-color: #D39E00; 
 
-/* Dropdown Menu Styles */
+/* dropdown menu */
 .dropdown {
-    display: none; /* Hide dropdown by default */
-    position: absolute; /* Position dropdown below parent */
-    background-color: #fff; /* White background */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
-    z-index: 1; /* Ensure dropdown appears above other elements */
-    top: 100%; /* Position directly below the menu item */
+    display: none; 
+    position: absolute; 
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+    top: 100%; 
     left: 0;
     min-width: 200px;
     border-radius: 5px;
@@ -76,35 +73,35 @@ body {
 }
 
 .menu-bar li:hover .dropdown {
-    display: block; /* Show dropdown on hover */
+    display: block; 
     opacity: 1;
     visibility: visible;
 }
 
 .dropdown li {
-    display: block; /* Stack dropdown items */
-    margin: 0; /* No margin for dropdown items */
+    display: block; 
+    margin: 0; 
 }
 
 .dropdown a {
-    color: #000; /* Black text for dropdown links */
-    text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Padding for dropdown items */
-    display: block; /* Block display for entire area */
+    color: #000; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    display: block; 
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 5px;
 }
 
 .dropdown a:hover {
-    background-color: #D39E00; /* Change background on hover */
-    color: #fff; /* Change text to white on hover */
+    background-color: #D39E00; 
+    color: #fff; 
 }
 
-/* BoilerReach Title */
+/* the title */
 .site-title {
     font-weight: bold;
-    color: #000; /* Black for 'Boiler' */
-    font-size: 48px; /* Default size */
+    color: #000; 
+    font-size: 48px; 
     text-align: center;
     margin: 20px 0;
 }
@@ -114,7 +111,6 @@ body {
     color: #D39E00; /* Gold for 'Reach' */
 }
 
-/* Content Section Styles */
 .content-section {
     background-color: #fff;
     padding: 20px;
@@ -132,7 +128,6 @@ body {
     margin: 10px 0;
 }
 
-/* CTA Button Styles */
 .cta-button {
     display: inline-block;
     margin-top: 15px;
@@ -149,7 +144,7 @@ body {
     color: #D39E00; /* Change text to gold on hover */
 }
 
-/* Responsive Styles */
+/* responsiveness */
 @media (max-width: 768px) {
     .site-title {
         font-size: 36px; /* Reduce font size for tablets */
@@ -162,7 +157,7 @@ body {
     }
 }
 
-/* Resource Page Styles */
+/* resource page */
 .section-title {
     text-align: center;
     font-size: 32px;
@@ -205,7 +200,7 @@ body {
     color: #D39E00;
 }
 
-/* Responsive Design */
+/* responsiveness */
 @media (min-width: 768px) {
     .resources-page .content-section {
         display: grid;
