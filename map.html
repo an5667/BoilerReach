@@ -6,6 +6,7 @@
     <title>Mappy!</title>
     <link rel="stylesheet" href="styles.css">
 
+    <!-- Interactive Menu Bar -->
     <nav class="menu-bar">
         <ul>
             <li class ="menu-item">
@@ -36,14 +37,15 @@
                     <li><a href="https://www.purdue.edu/campus-map/" target="_blank">Campus Map</a></li>
                     <li><a href="https://dining.purdue.edu/AboutUs/map.html" target="_blank">Dining</a></li>
 
-
+                    =======
                 </ul>
             </li>
         </ul>
     </nav>
-
+    
     
     <style>
+        /* Container to hold the map */
         body{
             font-family:Arial,sans-serif;
         }
@@ -60,11 +62,13 @@
 
         }
 
+        /* The map image itself */
         .map-image {
             width: 100%;
             height: 100%;
         }
 
+        /* Styling for the pin */
         .pin {
             position: absolute;
             width: 20px;
@@ -75,6 +79,7 @@
             transform: translate(-50%, -100%); /* Adjust to center the pin */
         }
 
+        /* Tooltip for location information */
         .pin::after {
             content: attr(data-location);
             position: absolute;
