@@ -13,11 +13,11 @@ body {
 }
 
 .menu-bar {
-    background-color: #000; /* Black background */
+    background-color: #000; 
     color:white;
     padding: 10px 0;
     text-align: center;
-    position: relative; /* Positioning for dropdowns */
+    position: relative; 
     z-index: 10;
 }
 
@@ -26,20 +26,20 @@ body {
 }
 
 .menu-bar li {
-    display: inline-block; /* Inline-block to allow dropdowns */
-    position: relative; /* Position relative for dropdown positioning */
+    display: inline-block; 
+    position: relative; 
     margin: 0 15px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform 0.3s ease; 
 }
 
 .menu-bar li:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1); 
 }
 .menu-item a {
-    color: white; /* Set the desired color for links */
+    color: white; 
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease, background-color 0.3s ease; 
     padding: 8px 12px;
     border-radius: 5px;
 }
@@ -47,7 +47,7 @@ body {
     color: #D39E00; /* Gold text */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease, background-color 0.3s ease; 
     padding: 8px 12px;
     border-radius: 5px;
 }
@@ -108,7 +108,7 @@ body {
 
 .reach-title {
     font-style: italic;
-    color: #D39E00; /* Gold for 'Reach' */
+    color: #D39E00; 
 }
 
 .content-section {
@@ -132,28 +132,28 @@ body {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #D39E00; /* Gold background */
-    color: #000; /* Black text */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    background-color: #D39E00;
+    color: #000; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .cta-button:hover {
-    background-color: #000; /* Change to black on hover */
-    color: #D39E00; /* Change text to gold on hover */
+    background-color: #000;
+    color: #D39E00;
 }
 
 /* responsiveness */
 @media (max-width: 768px) {
     .site-title {
-        font-size: 36px; /* Reduce font size for tablets */
+        font-size: 36px; 
     }
 }
 
 @media (max-width: 480px) {
     .site-title {
-        font-size: 24px; /* Further reduce font size for mobile */
+        font-size: 24px; 
     }
 }
 
